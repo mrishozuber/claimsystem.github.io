@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>index</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="bootstrap/css/main.css" rel="stylesheet" />
+    <link href="mystyle.css" rel="stylesheet" />
+		<script src="bootstrap/js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	</head>
+	<body> 
+		<div class="container-fluid">
+      <div class="row mt-2">
+<!--Column For Side Bar-->
+<div class="col-md-12">
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar" class="shadow-lg p-3 mb-5 bg-white rounded ">
+        <div class="sidebar-header ">
+            <h3>CMS</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active" id="homeli">
+                <a href="#home" id="home"> Home</a>
+            </li>
+            <li id="addli">
+                <a href="#add" id="add">Add claim</a>
+            </li>
+            <li id="viewli">
+                <a href="#view" id="view">View Claims</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                          <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                          </button>
+                         <h2 class="ml-auto py-2">&nbsp;&nbsp;&nbsp;&nbsp; COMPLAINTS MANAGEMENT SYSTEM</h2>
+        </nav>
+
+        <div class="container-fluid">
+          <div class="row" id="homez">
+            <div class="col-md-6 ">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-header bg-white">
+                  <h4>Add New Claim</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Make sure you write your Registration Number and Shotly describe your complaints</p>
+                  <a href="#add" class="btn btn-primary">Complaint</a>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-header bg-white">
+                  <h4>View Complaints</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Use a button below to view of your previous submitted complaints</p>
+                  <a href="#view" class="btn btn-primary">View Complaint</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="row" id="addz">
+          <div class="col-md-6 offset-3">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+              <div class="card-header bg-white">
+              <h3> Add your complaints</h3> 
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+
+                  <form>
+                    <div class="form-group">
+                      <label for="tudom">Enter Registration Number </label>
+                      <input type="text" class="form-control" id="tudom" placeholder="T/UDOM/2007/00001">
+                    </div>
+                    <div class="form-group">
+                      <label for="area">Area of your complaints</label>
+                      <select class="form-control" id="area">
+                        <option value="1">Cafeteria</option>
+                        <option value="2">Lecture rooom</option>
+                        <option value="3">Hostel</option>
+                        <option value="4">Library</option>
+                        <option value="5">Other , Specify</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="complaints">Briefly explain your complaint </label>
+                      <textarea class="form-control" id="complaints" rows="5"></textarea>
+                    </div>
+                  </form>
+
+                </p>
+                <a href="#" class="btn btn-primary">Submit Complaint</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row " id="viewz">
+          <div class="col-md-10 offset-1 shadow-lg p-3 mb-5 bg-white rounded">
+                      
+            <table class="table ">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" width="23%">RegNo</th>
+                  <th scope="col">Area</th>
+                  <th scope="col">Complaint</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="23%">T/UDOM/2007/0001</td>
+                  <td>Cafeteria</td>
+                  <td>Msosi mbaya saaana leo</td>
+                </tr>
+                <tr>
+                  <td>T/UDOM/2007/0001</td>
+                  <td>Lecture room</td>
+                  <td>Projector haioneshi vizuri kwenye darasa la FL2</td>
+                </tr>
+                <tr>
+                  <td>T/UDOM/2007/0001</td>
+                  <td>Hostel</td>
+                  <td>Vyoo vimeziba leo siku ya tano , tukanye wapi ... Humanities Block 14 floor ya 3</td>
+                </tr>
+                <tr>
+                  <td>T/UDOM/2007/0001</td>
+                  <td>Library</td>
+                  <td>Hakuna mtandao leo siku ya nne</td>
+                </tr>
+                <tr>
+                  <td>T/UDOM/2007/0001</td>
+                  <td>Other</td>
+                  <td>Mr lecturer kaniomba penzi ili anipe marks za kuingia UE</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!--End of Column For Side Bar-->
+
+      </div>
+		  </div>
+
+
+<script>
+  $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            
+        });
+        $('#viewz').hide();
+          $('#addz').hide();
+
+          $('#home').on('click', function () {
+          $('#viewz').hide();
+          $('#addz').hide();
+          $('#homez').show();
+          $('#homeli').addClass('active');
+          $('#addli').removeClass('active');
+          $('#viewli').removeClass('active');
+        });
+
+        $('#add').on('click', function () {
+          $('#viewz').hide();
+          $('#homez').hide();
+          $('#addz').show();
+          $('#addli').addClass('active');
+          $('#homeli').removeClass('active');
+           $('#viewli').removeClass('active');
+        });
+
+        $('#view').on('click', function () {
+          $('#addz').hide();
+          $('#homez').hide();
+          $('#viewz').show();
+          $('#viewli').addClass('active');
+          $('#homeli').removeClass('active');
+          $('#addli').removeClass('active');
+        });
+    });
+</script>      
+
+	</body>
+</html>
